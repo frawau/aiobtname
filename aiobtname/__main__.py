@@ -1,5 +1,5 @@
-import sys
-import .aiobtname
+import sys,asyncio
+import aiobtname
 
 if len(sys.argv) <= 1:
     print("Error: Usage is {} [adapter nb] <mac address> [<mac address>]".format(sys.argv[0]))
@@ -26,10 +26,10 @@ except:
 event_loop = asyncio.get_event_loop()
 
 #First create and configure a raw socket
-mysocket = create_bt_socket(mydev)
+mysocket = aiobtname.create_bt_socket(mydev)
 
 #create a connection with the raw socket
-fac=event_loop.create_connection(BTNameRequester,sock=mysocket)
+fac=event_loop.create_connection(aiobtname.BTNameRequester,sock=mysocket)
 #Start it
 conn,btctrl = event_loop.run_until_complete(fac)
 #Attach your processing 
