@@ -56,7 +56,9 @@ Using it is quite simple.
             btctrl.process=my_process
             
                 my_process should be a function that takes 1 parameter,
-                a string, the  MAC address of the answering device.
+                a dictionary with 2 keys:
+                    mac:  the  MAC address of the answering device
+                   name:  the name of the answering device
                   
                 It will be called for every successful answer.
                    

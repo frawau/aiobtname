@@ -4,12 +4,12 @@ from distutils.core import setup
 
 setup(name='aiobtname',
     packages=['aiobtname'],
-    version='0.1.0',
+    version='0.1.1',
     author='François Wautier',
     author_email='francois@wautier.eu',
     description='Library for Name Request over Bluetooth with asyncio.',
     url='http://github.com/frawau/aiobtname',
-    download_url='http://github.com/frawau/aiolifx/archive/aiobtname/0.1.0.tar.gz',  
+    download_url='http://github.com/frawau/aiolifx/archive/aiobtname/0.1.1.tar.gz',  
     keywords = ['bluetooth', 'mac address', 'presence', 'automation'], 
     license='MIT',
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers

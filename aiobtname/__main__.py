@@ -5,8 +5,8 @@ if len(sys.argv) <= 1:
     print("Error: Usage is {} [adapter nb] <mac address> [<mac address>]".format(sys.argv[0]))
     sys.exit(-1)
 
-def my_process(mac):
-    print ("Heard from MAC:      {}".format(mac))
+def my_process(data):
+    print ("Heard from MAC:      {} {}".format(data["mac"],data["name"]))
     print()
     
 mac_list=[]

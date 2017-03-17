@@ -119,7 +119,8 @@ class BTNameRequester(asyncio.Protocol):
         if resu[0]==b'\x04' and resu[1]==b'\x07' and resu[3]==b'\x00': #Essentially a successful answer
             raw_mac = packet[4:10]
             mac = ':'.join(a + b for a, b in list(zip(*[iter(raw_mac.hex())]*2))[::-1])
-            self.process(mac)
+            name=packet[10:].strip(b'\x00').decode()
+            self.process({"mac":mac,"name":name})
     
     def default_process(self,data):
         pass
