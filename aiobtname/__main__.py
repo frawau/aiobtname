@@ -32,7 +32,7 @@ mysocket = aiobtname.create_bt_socket(mydev)
 #This used to work but now requires a STREAM socket.
 #fac=event_loop.create_connection(aiobtname.BTNameRequester,sock=mysocket)
 #Fix in aioblescan thanks to martensjacobs
-fac=event_loop._create_connection_transport(mysocket,aiobs.BTNameRequester,None,None)
+fac=event_loop._create_connection_transport(mysocket,aiobtname.BTNameRequester,None,None)
 #Start it
 conn,btctrl = event_loop.run_until_complete(fac)
 #Attach your processing
